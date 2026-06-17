@@ -17,6 +17,12 @@ For the purpose of this assignment:
 
 ### Pipeline Architecture
 
+![RAG pipeline architecture](architecture.jpg)
+
+The diagram above shows the runtime request flow: a user query is embedded and run through hybrid (dense + sparse) search separately against the text and table collections in Milvus, each result set is re-ranked, and the combined text/table context is assembled with the query into a prompt sent to the Gemini LLM, whose response is returned to the user.
+
+The diagram below shows the file-level pipeline that produces and stores that data ahead of query time:
+
 ```
 PDF Documents (data/)
         │
@@ -28,12 +34,6 @@ PDF Documents (data/)
         │  JSON per document
         ▼
       output/
-        │
-        ▼
- ┌──────────────────┐
- │   embedder.py     │  BGE-M3 embedding: dense (semantic) +
- │                    │  sparse (lexical) vectors per chunk
- └──────────────────┘
         │
         ▼
  ┌──────────────────────────┐
