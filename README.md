@@ -172,3 +172,4 @@ Each processed PDF produces a JSON file shaped as:
 ### Output
 
 - [vector-search-gemini.ipynb](https://github.com/koushik-elite/interview-task1/blob/master/vector-search-gemini.ipynb) — notebook with the executed RAG query outputs.
+- [my-vector-database](https://www.kaggle.com/datasets/koushikcon/my-vector-database/) — public Kaggle dataset containing the Milvus Lite vector database (`demo_1.db`) built from the embedded text/table chunks, downloadable by anyone.
