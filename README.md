@@ -168,3 +168,7 @@ Each processed PDF produces a JSON file shaped as:
 | Embedding model    | `BAAI/bge-m3` (`FlagEmbedding`) |
 | Vector store       | Milvus Lite (`pymilvus`)        |
 | LLM (generation)   | Google Gemini                   |
+
+### Output
+
+- [vector-search-gemini.ipynb](https://github.com/koushik-elite/interview-task1/blob/master/vector-search-gemini.ipynb) — notebook with the executed RAG query outputs.
